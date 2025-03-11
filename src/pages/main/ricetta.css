@@ -1,0 +1,72 @@
+/* Contenitore della ricetta */
+.ricetta-container {
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Effetto hover per il contenitore della ricetta */
+.ricetta-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Titolo della ricetta */
+.ricetta-container h2 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Descrizione della ricetta */
+.ricetta-container p {
+  color: #555;
+  font-size: 1rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Immagine della ricetta */
+.ricetta-container img {
+  width: auto;
+  height: auto;
+  /* Imposta l'altezza dell'immagine */
+  object-fit: cover;
+  /* Assicura che l'immagine si adatti senza deformarsi */
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Responsività per schermi più piccoli */
+@media (max-width: 768px) {
+  .ricetta-container {
+    width: 90%;
+    /* Aumenta la larghezza su dispositivi mobili */
+    margin: 10px auto;
+  }
+
+  .ricetta-container img {
+    height: 180px;
+    /* Rende l'immagine leggermente più piccola su dispositivi mobili */
+  }
+}
+
+@media (max-width: 480px) {
+  .ricetta-container {
+    width: 100%;
+  }
+
+  .ricetta-container img {
+    height: 150px;
+    /* Ancora più piccola per schermi piccoli */
+  }
+}

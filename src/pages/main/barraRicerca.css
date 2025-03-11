@@ -1,0 +1,56 @@
+/* Stile per il contenitore della ricerca */
+.ricerca-ricetta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  /* Colore di sfondo chiaro */
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: row;
+}
+
+/* Stile per l'input di testo */
+.ricerca-ricetta input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.ricerca-ricetta input:focus {
+  border-color: #4CAF50;
+  /* Verde per il focus */
+}
+
+/* Stile per il pulsante */
+.ricerca-ricetta button {
+  background-color: #4CAF50;
+  /* Verde per il pulsante */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+/* Effetto hover per il pulsante */
+.ricerca-ricetta button:hover {
+  background-color: #45a049;
+}
+
+/* Effetto focus per il pulsante */
+.ricerca-ricetta button:focus {
+  outline: none;
+  background-color: #388e3c;
+}

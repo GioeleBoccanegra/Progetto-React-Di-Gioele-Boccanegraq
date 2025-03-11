@@ -1,0 +1,33 @@
+.container-tutto {
+  width: 100vw;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nome-img-ricetta {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nome-img-ricetta h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.nome-img-ricetta img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ingrdienti {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
