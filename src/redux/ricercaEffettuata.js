@@ -10,8 +10,11 @@ export const ricercaEffettuataSlice = createSlice({
     premuto: (state) => {
       state.value = true;
     },
+    resetPremuto: (state) => {
+      state.value = false;
+    },
   },
 })
 
-export const { premuto } = ricercaEffettuataSlice.actions
+export const { premuto, resetPremuto } = ricercaEffettuataSlice.actions
 export const ricercaEffettuataReducer = ricercaEffettuataSlice.reducer

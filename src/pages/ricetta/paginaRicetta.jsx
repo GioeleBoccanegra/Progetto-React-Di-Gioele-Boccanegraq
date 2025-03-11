@@ -7,13 +7,11 @@ import axios from 'axios';
 import { Ingredienti } from './ingredienti';
 import "./paginaRicetta.css"
 import "./ingredienti.css"
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 
 
 export const PaginaRicetta = () => {
-  const navigate = useNavigate();
   const infoRicetta = useSelector((state) => state.informazioniRicetta.value)
   const dispatch = useDispatch()
   const location = useLocation();
