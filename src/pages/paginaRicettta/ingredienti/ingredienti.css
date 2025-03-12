@@ -11,6 +11,9 @@
   /* Sfondo leggero per ogni riga */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   /* Leggera ombra per effetto di profondità */
+  justify-content: center;
+  min-width: 90%;
+  flex-direction: column;
 }
 
 /* Stile per il nome dell'ingrediente */
@@ -46,4 +49,10 @@
   /* Piccola elevazione al passaggio del mouse */
   transition: background-color 0.3s ease, transform 0.2s ease;
   /* Animazione al passaggio del mouse */
+}
+
+@media (min-width: 1025px) {
+  .ingrediente-e-qt-container {
+    min-width: 80%;
+  }
 }

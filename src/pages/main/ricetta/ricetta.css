@@ -19,7 +19,7 @@
 }
 
 /* Titolo della ricetta */
-.ricetta-container h2 {
+.ricetta-container h3 {
   font-size: 1.6rem;
   color: #333;
   font-weight: 600;

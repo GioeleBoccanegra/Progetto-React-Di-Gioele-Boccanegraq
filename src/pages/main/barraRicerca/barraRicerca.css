@@ -7,6 +7,8 @@
   width: 90%;
   max-width: 500px;
   padding: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* Stile per il contenitore dell'input e del pulsante */
@@ -17,10 +19,11 @@
   background-color: #f4f4f4;
   /* Colore di sfondo chiaro */
   padding: 10px 20px;
+  padding-bottom: 0;
   border-radius: 8px;
   width: 90%;
   max-width: 400px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex-direction: row;
 }
@@ -80,4 +83,21 @@
   color: #f0ad4e;
   /* Giallo per il limite superato */
   font-size: 16px;
+}
+
+.titolo-risultati {
+  font-size: 2rem;
+  /* Aumenta la dimensione del font */
+  font-weight: 700;
+  /* Rende il testo più spesso */
+  color: #333;
+  /* Colore scuro per il testo */
+  text-align: center;
+  /* Allinea il testo al centro */
+  margin-bottom: 0px;
+  margin-top: 0;
+  /* Aggiunge uno spazio sotto il titolo */
+  text-transform: uppercase;
+  /* Rende il testo tutto maiuscolo */
+  letter-spacing: 2px;
 }

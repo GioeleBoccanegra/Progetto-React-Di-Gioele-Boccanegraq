@@ -4,7 +4,7 @@ export const Ricetta = ({ ricetta }) => {
 
   return (
     <div className="ricetta-container">
-      <h2>{ricetta.title}</h2>
+      <h3>{ricetta.title}</h3>
       <img src={ricetta.image} alt={ricetta.title} />
       <Link to={{ pathname: "/ricetta" }} state={{ ricetta }}>
         Prepare it

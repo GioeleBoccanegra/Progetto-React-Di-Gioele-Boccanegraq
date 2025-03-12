@@ -5,7 +5,7 @@
   gap: 20px;
   /* Distanza tra le ricette */
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
   justify-content: flex-start;
   /* Distribuisce gli elementi senza centrarli */
   align-items: flex-start;
