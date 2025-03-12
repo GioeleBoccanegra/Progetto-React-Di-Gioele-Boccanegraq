@@ -17,7 +17,7 @@ export const PaginaRicetta = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const { ricetta } = location.state;
-  const url = '/.netlify/functions/dettagliRicetta.js';
+  const url = '/.netlify/functions/dettagliRicetta';
 
   const rimuoviDuplicatiIngredienti = (array) => {
     const visti = new Set();
