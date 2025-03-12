@@ -34,7 +34,7 @@ export const PaginaRicetta = () => {
     window.scrollTo(0, 0);
     setLoading(true);
     setError(null);
-    axios.get(url)
+    axios.post(url, { ricettaId: ricetta.id })
       .then(response => {
         const datiFiltrati = {
           ...response.data,
