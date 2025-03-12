@@ -4,19 +4,19 @@ import { BarraRicerca } from './barraRicerca'
 import './barraRicerca.css'
 import "./elencoRicette.css"
 import "./ricetta.css"
+import "./main.css"
 import { ElencoRicette } from './elencoRicette';
 
 export const Main = () => {
   const elencoRicette = useSelector((state) => state.elencoRicette.value);
   return (
 
-    <div>
-      <div>
-        <h1>ricerca ricette vegane</h1>
-        <BarraRicerca /> {/* Barra di ricerca */}
+    <div className="main-container">
+      <div className="search-container">
+        <h1>Search for vegan recipes</h1>
+        <BarraRicerca />
       </div>
-      <ElencoRicette elencoRicette={elencoRicette} /> {/* Passa elencoRicette al componente ElencoRicette */}
+      <ElencoRicette elencoRicette={elencoRicette} />
     </div>
-
   )
 }

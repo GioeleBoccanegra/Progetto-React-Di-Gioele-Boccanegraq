@@ -1,4 +1,15 @@
-/* Stile per il contenitore della ricerca */
+/* Contenitore principale della ricerca */
+.ricerca-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Stile per il contenitore dell'input e del pulsante */
 .ricerca-ricetta {
   display: flex;
   align-items: center;
@@ -9,7 +20,7 @@
   border-radius: 8px;
   width: 100%;
   max-width: 400px;
-  margin: 20px auto;
+  margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex-direction: row;
 }
@@ -53,4 +64,20 @@
 .ricerca-ricetta button:focus {
   outline: none;
   background-color: #388e3c;
+}
+
+/* Messaggio di ricerca non trovata */
+.ricerca-container p {
+  font-size: 16px;
+  color: #d9534f;
+  /* Rosso per il messaggio di errore */
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Messaggio limite superato */
+.ricerca-container p:last-child {
+  color: #f0ad4e;
+  /* Giallo per il limite superato */
+  font-size: 16px;
 }

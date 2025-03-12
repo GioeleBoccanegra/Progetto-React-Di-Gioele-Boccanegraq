@@ -1,0 +1,23 @@
+/* Stile generale */
+.main-container {
+  width: 100vW;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Titolo */
+.main-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Contenitore della barra di ricerca */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}

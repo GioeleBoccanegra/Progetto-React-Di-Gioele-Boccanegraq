@@ -1,18 +1,18 @@
-/* Contenitore della ricetta */
 .ricetta-container {
-  background-color: #f4f4f9;
-  border-radius: 8px;
+  background-color: #fff;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-/* Effetto hover per il contenitore della ricetta */
+/* Hover per il contenitore della ricetta */
 .ricetta-container:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -20,53 +20,79 @@
 
 /* Titolo della ricetta */
 .ricetta-container h2 {
+  font-size: 1.6rem;
   color: #333;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 10px;
-  text-align: center;
-}
-
-/* Descrizione della ricetta */
-.ricetta-container p {
-  color: #555;
-  font-size: 1rem;
-  margin: 10px 0;
-  text-align: center;
+  text-transform: capitalize;
 }
 
 /* Immagine della ricetta */
 .ricetta-container img {
-  width: auto;
+  width: 300px;
   height: auto;
-  /* Imposta l'altezza dell'immagine */
   object-fit: cover;
-  /* Assicura che l'immagine si adatti senza deformarsi */
   border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Link per preparare la ricetta */
+.ricetta-container a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
   margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #fff;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: pulse 1.5s infinite;
+}
+
+/* Hover per il link */
+.ricetta-container a:hover {
+  background-color: #4CAF50;
+  color: #fff;
 }
 
 /* Responsività per schermi più piccoli */
 @media (max-width: 768px) {
   .ricetta-container {
-    width: 90%;
-    /* Aumenta la larghezza su dispositivi mobili */
-    margin: 10px auto;
-  }
-
-  .ricetta-container img {
-    height: 180px;
-    /* Rende l'immagine leggermente più piccola su dispositivi mobili */
+    width: calc(50% - 20px);
+    /* 2 colonne per tablet */
   }
 }
 
 @media (max-width: 480px) {
   .ricetta-container {
     width: 100%;
+    /* Una colonna per dispositivi mobili */
   }
 
   .ricetta-container img {
-    height: 150px;
-    /* Ancora più piccola per schermi piccoli */
+    height: 180px;
+    /* Altezza immagine per schermi piccoli */
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    /* Ingrandisce l'elemento */
+    opacity: 0.8;
+    /* Riduce un po' l'opacità per l'effetto */
+  }
+
+  100% {
+    transform: scale(1);
+    /* Ritorna alla dimensione originale */
+    opacity: 1;
   }
 }

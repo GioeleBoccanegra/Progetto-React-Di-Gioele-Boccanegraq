@@ -1,16 +1,14 @@
-import { useNavigate } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
 export const Ricetta = ({ ricetta }) => {
-  console.log(ricetta)
-  const navigate = useNavigate();
-  const c = () => {
-    console.log("xiao")
-    navigate('/ricetta', { state: { ricetta } });
-  }
+
   return (
-    <div onClick={c} className="ricetta-container">
+    <div className="ricetta-container">
       <h2>{ricetta.title}</h2>
       <img src={ricetta.image} alt={ricetta.title} />
+      <Link to={{ pathname: "/ricetta" }} state={{ ricetta }}>
+        Prepare it
+      </Link>
     </div>
   )
 }

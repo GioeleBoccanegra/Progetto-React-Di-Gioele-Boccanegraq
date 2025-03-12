@@ -8,6 +8,8 @@ import { Ingredienti } from './ingredienti';
 import "./paginaRicetta.css"
 import "./ingredienti.css"
 import { Link } from 'react-router-dom';
+import { Preparazione } from './preparazione';
+import "./preparazione.css"
 
 
 
@@ -59,10 +61,18 @@ export const PaginaRicetta = () => {
       </div>
 
       <div className='ingrdienti'>
-
+        <h2>Ingredienti</h2>
         {infoRicetta.extendedIngredients?.map((ingredienti) => (
           <Ingredienti key={ingredienti.id} ingredienti={ingredienti} />
         ))}
+      </div>
+      <div className='preparazioni'>
+        <h2>Preparazione</h2>
+        {infoRicetta.analyzedInstructions?.length > 0 &&
+          infoRicetta.analyzedInstructions[0].steps?.map((preparazione) => (
+            <Preparazione key={preparazione.number} preparazione={preparazione} />
+          ))
+        }
       </div>
     </div >
 

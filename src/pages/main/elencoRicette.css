@@ -1,79 +1,20 @@
-/* Stile per l'intero contenitore dell'elenco delle ricette */
 .elenco-ricette {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* Permette di andare su più righe */
   gap: 20px;
-  /* Distanza tra i contenitori delle ricette */
+  /* Distanza tra le ricette */
   padding: 20px;
-  background-color: #f4f4f4;
-}
-
-/* Stile per il contenitore individuale della ricetta */
-.ricetta-container {
-  background-color: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  width: calc(33.33% - 20px);
-  /* 3 colonne per schermi larghi */
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
+  margin-top: 20px;
+  justify-content: flex-start;
+  /* Distribuisce gli elementi senza centrarli */
+  align-items: flex-start;
+  /* Allinea gli elementi in cima alle righe */
+  max-width: 1000px;
+  /* Impostazione di una larghezza massima */
+  margin-left: auto;
+  margin-right: auto;
+  /* Centra il contenitore */
   align-items: center;
-  /* Centra gli elementi orizzontalmente */
-}
-
-/* Responsività per schermi più piccoli */
-@media (max-width: 768px) {
-  .ricetta-container {
-    width: calc(50% - 20px);
-    /* 2 colonne per dispositivi più piccoli */
-  }
-}
-
-@media (max-width: 480px) {
-  .ricetta-container {
-    width: 100%;
-    /* 1 colonna per schermi ancora più piccoli */
-  }
-}
-
-/* Effetto hover per il contenitore della ricetta */
-.ricetta-container:hover {
-  transform: translateY(-10px);
-  /* Sposta il contenitore verso l'alto al passaggio del mouse */
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
-  /* Aumenta l'ombra per un effetto più marcato */
-}
-
-/* Stile per l'immagine della ricetta */
-.ricetta-container img {
-  width: 100%;
-  height: 200px;
-  /* Imposta una dimensione fissa per l'immagine */
-  object-fit: cover;
-  /* Assicurati che l'immagine copra l'area senza deformarsi */
-  border-bottom: 2px solid #f0f0f0;
-  /* Linea sottile tra immagine e testo */
-}
-
-/* Stile per il titolo della ricetta */
-.ricetta-container h2 {
-  font-size: 1.2rem;
-  margin: 10px 0;
-  color: #333;
-  text-align: center;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-/* Stile per il corpo della ricetta, per ulteriori dettagli (ad esempio, descrizione) */
-.ricetta-container p {
-  font-size: 1rem;
-  padding: 0 10px 15px 10px;
-  color: #555;
-  text-align: center;
-  line-height: 1.6;
+  justify-content: center;
 }
