@@ -4,12 +4,12 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { aggiornaInfo } from "../../redux/informazioniRicettaSlice"
 import axios from 'axios';
-import { Ingredienti } from './ingredienti';
+import { Ingredienti } from './ingredienti/Ingredienti';
 import "./paginaRicetta.css"
-import "./ingredienti.css"
+import "./ingredienti/ingredienti.css"
 import { Link } from 'react-router-dom';
-import { Preparazione } from './preparazione';
-import "./preparazione.css"
+import { Preparazione } from './preparazione/Preparazione';
+import "./preparazione/preparazione.css"
 
 
 
@@ -54,20 +54,22 @@ export const PaginaRicetta = () => {
   return (
 
     <div className='container-tutto'>
-      <Link to="/">indietro</Link>
+      <div className='link-container'>
+        <Link to="/">look for another recipe</Link>
+      </div>
       <div className='nome-img-ricetta'>
         <h1>{ricetta.title}</h1>
         <img src={ricetta.image} alt={ricetta.title} />
       </div>
 
       <div className='ingrdienti'>
-        <h2>Ingredienti</h2>
+        <h2>Ingredients</h2>
         {infoRicetta.extendedIngredients?.map((ingredienti) => (
           <Ingredienti key={ingredienti.id} ingredienti={ingredienti} />
         ))}
       </div>
       <div className='preparazioni'>
-        <h2>Preparazione</h2>
+        <h2>Preparation</h2>
         {infoRicetta.analyzedInstructions?.length > 0 &&
           infoRicetta.analyzedInstructions[0].steps?.map((preparazione) => (
             <Preparazione key={preparazione.number} preparazione={preparazione} />

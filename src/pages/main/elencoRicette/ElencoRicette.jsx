@@ -1,5 +1,5 @@
 
-import { Ricetta } from "./ricetta"
+import { Ricetta } from "../ricetta/ricetta"
 
 
 export const ElencoRicette = ({ elencoRicette }) => {

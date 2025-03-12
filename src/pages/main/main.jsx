@@ -1,11 +1,11 @@
 
 import { useSelector } from 'react-redux';
-import { BarraRicerca } from './barraRicerca'
-import './barraRicerca.css'
-import "./elencoRicette.css"
-import "./ricetta.css"
+import { BarraRicerca } from './/barraRicerca/barraRicerca'
+import './barraRicerca/barraRicerca.css'
+import "./elencoRicette/elencoRicette.css"
+import "./ricetta/ricetta.css"
 import "./main.css"
-import { ElencoRicette } from './elencoRicette';
+import { ElencoRicette } from './elencoRicette/ElencoRicette';
 
 export const Main = () => {
   const elencoRicette = useSelector((state) => state.elencoRicette.value);

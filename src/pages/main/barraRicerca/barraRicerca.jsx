@@ -1,11 +1,11 @@
 
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { aggiorna, svuota } from "../../redux/inputRicettaSlice"
-import { aggiornaElenco } from "../../redux/elenocRicetteSlice"
+import { aggiorna, svuota } from "../../../redux/inputRicettaSlice"
+import { aggiornaElenco } from "../../../redux/elenocRicetteSlice"
 import axios from "axios"
-import { premuto, resetPremuto } from '../../redux/ricercaEffettuata'
-import { registraStato } from '../../redux/statoRichiesta'
+import { premuto, resetPremuto } from '../../../redux/ricercaEffettuata'
+import { registraStato } from '../../../redux/statoRichiesta'
 
 
 
@@ -16,6 +16,13 @@ export const BarraRicerca = () => {
   const statoRichiesta = useSelector((state) => state.statoRichiesta.value);
 
   const dispatch = useDispatch()
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      cercaRicette()
+      dispatch(svuota())
+    }
+  };
 
   const cercaRicette = () => {
     if (inputRicetta) {
@@ -49,11 +56,11 @@ export const BarraRicerca = () => {
   return (
     <div className='ricerca-container'>
       <div className="ricerca-ricetta">
-        <input value={inputRicetta} onChange={handleChange} type="text" placeholder="Cerca..." />
+        <input value={inputRicetta} onKeyDown={handleKeyDown} onChange={handleChange} type="text" placeholder="Search recipes..." />
         <button onClick={handleClick}> 🔍 </button>
       </div>
-      {cercato && elencoRicette.length === 0 && <p>Nessuna ricetta trovata.</p>}
-      {statoRichiesta == 402 && <p>superato il limite di richieste giornaliere, tornare domani.</p>}
+      {cercato && elencoRicette.length === 0 && <p>No recipes found.</p>}
+      {statoRichiesta == 402 && <p>Exceeded daily request limit, come back tomorrow.</p>}
     </div>
   )
 }

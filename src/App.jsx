@@ -1,7 +1,7 @@
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Main } from './pages/main/main'
-import { PaginaRicetta } from './pages/ricetta/paginaRicetta'
+import { PaginaRicetta } from './pages/paginaRicettta/paginaRicetta'
 function App() {
 
   return (

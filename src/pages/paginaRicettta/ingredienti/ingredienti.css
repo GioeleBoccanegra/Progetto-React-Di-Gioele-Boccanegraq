@@ -1,0 +1,49 @@
+/* Contenitore per l'ingrediente e la quantità */
+.ingrediente-e-qt-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  /* Spazio maggiore tra gli ingredienti */
+  padding: 10px;
+  border-radius: 8px;
+  /* Angoli arrotondati */
+  background-color: #f9f9f9;
+  /* Sfondo leggero per ogni riga */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Leggera ombra per effetto di profondità */
+}
+
+/* Stile per il nome dell'ingrediente */
+.ingrediente {
+  font-size: 18px;
+  font-weight: 600;
+  /* Aumentato il peso del font per più enfasi */
+  color: #333;
+  text-align: left;
+  margin: 0;
+  flex: 1;
+  /* Occupa tutto lo spazio disponibile tranne quello della quantità */
+}
+
+/* Stile per la quantità dell'ingrediente */
+.quantita-ingredienti {
+  font-size: 16px;
+  font-weight: 500;
+  /* Più evidenza sulla quantità */
+  color: #4CAF50;
+  /* Colore verde per la quantità per renderlo distintivo */
+  text-align: right;
+  /* Allinea la quantità a destra */
+  margin: 0;
+  flex: 1;
+}
+
+/* Effetto hover per il contenitore */
+.ingrediente-e-qt-container:hover {
+  background-color: #e0f7e9;
+  /* Colore di sfondo più chiaro al passaggio del mouse */
+  transform: translateY(-2px);
+  /* Piccola elevazione al passaggio del mouse */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Animazione al passaggio del mouse */
+}
