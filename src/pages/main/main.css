@@ -6,7 +6,7 @@
   margin-bottom: 0;
 }
 
-/.main-container h1 {
+.main-container h1 {
   font-size: clamp(2rem, 5vw, 3.5rem);
   /* Adatta la dimensione in base allo schermo */
   font-weight: 700;
