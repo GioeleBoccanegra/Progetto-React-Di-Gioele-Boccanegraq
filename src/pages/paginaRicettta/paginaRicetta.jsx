@@ -17,8 +17,7 @@ export const PaginaRicetta = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const { ricetta } = location.state;
-  const apiKey = import.meta.env.VITE_API_KEY;
-  const url = `https://api.spoonacular.com/recipes/${ricetta.id}/information?apiKey=${apiKey}`;
+  const url = '/.netlify/functions/dettagliRicetta';
 
   const rimuoviDuplicatiIngredienti = (array) => {
     const visti = new Set();

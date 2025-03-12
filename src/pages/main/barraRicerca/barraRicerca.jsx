@@ -18,9 +18,9 @@ export const BarraRicerca = () => {
     if (!inputRicetta) return;
 
     try {
-      const apiKey = import.meta.env.VITE_API_KEY;
-      const url = `https://api.spoonacular.com/recipes/complexSearch?diet=vegetarian&query=${inputRicetta}&apiKey=${apiKey}`;
-      const response = await axios.get(url);
+      const response = await axios.post('/.netlify/functions/cercaRicetta', {
+        inputRicetta
+      });
 
       if (response.data.results) {
         dispatch(aggiornaElenco(response.data.results));
