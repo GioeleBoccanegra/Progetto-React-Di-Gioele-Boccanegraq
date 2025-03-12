@@ -58,10 +58,10 @@
 }
 
 /* Responsività per schermi più piccoli */
-@media (max-width: 768px) {
+@media (max-width: 845px) {
   .ricetta-container {
-    width: calc(50% - 20px);
-    /* 2 colonne per tablet */
+    width: 80%
+      /* 2 colonne per tablet */
   }
 }
 
