@@ -1,6 +1,7 @@
 # Vegan Recipe Search App
 
 Questa è un'applicazione React che consente agli utenti di cercare ricette vegetariane/vegane utilizzando l'API Spoonacular. Gli utenti possono cercare ricette, visualizzare gli ingredienti e le istruzioni di preparazione. Il progetto utilizza Redux per la gestione dello stato e Axios per effettuare richieste HTTP.
+visibile su: https://ricette-vegana-gioele-boccanegra.netlify.app/
 
 ## Funzionalità
 
