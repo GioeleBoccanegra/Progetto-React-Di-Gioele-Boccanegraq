@@ -6,12 +6,19 @@
   margin-bottom: 0;
 }
 
-/* Titolo */
-.main-container h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
+/.main-container h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  /* Adatta la dimensione in base allo schermo */
+  font-weight: 700;
+  /* Mantiene il grassetto ma più leggibile */
+  color: #222;
+  /* Colore leggermente più scuro per maggiore contrasto */
+  margin-bottom: 1.5rem;
+  /* Spazio più bilanciato */
+  text-align: center;
+  /* Centra il titolo */
+  text-transform: capitalize;
+  /* Rende il titolo più leggibile */
 }
 
 /* Contenitore della barra di ricerca */
