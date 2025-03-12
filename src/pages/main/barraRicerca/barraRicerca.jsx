@@ -18,7 +18,7 @@ export const BarraRicerca = () => {
     if (!inputRicetta) return;
 
     try {
-      const response = await axios.post('../../../../netifly/functions/cercaRicetta.js', {
+      const response = await axios.post('/.netlify/functions/cercaRicetta', {
         inputRicetta
       });
 
