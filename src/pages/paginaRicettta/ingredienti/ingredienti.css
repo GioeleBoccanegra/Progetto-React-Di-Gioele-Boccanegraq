@@ -35,7 +35,7 @@
   /* Più evidenza sulla quantità */
   color: #4CAF50;
   /* Colore verde per la quantità per renderlo distintivo */
-  text-align: right;
+  text-align: left;
   /* Allinea la quantità a destra */
   margin: 0;
   flex: 1;
